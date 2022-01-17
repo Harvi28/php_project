@@ -18,12 +18,17 @@ span.a {
   box-shadow: 3px 3px #ad8ba6;
 }
 
-table{
+.block{
+width: auto;
+height: 200px;
+}
+
+/*table{
   margin-top: 250px;
 }
 
 
-/*span.b {
+span.b {
   display: inline; /* the default for span 
   width: 200px;
   height: 40px;

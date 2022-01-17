@@ -1,6 +1,6 @@
 <?php 
 $hn = 'localhost';
-$db = 'publications';
+$db = 'php_project';
 $un = 'root';
 $pw = 'root';
 
