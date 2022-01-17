@@ -1,0 +1,19 @@
+body{
+	background-color: #3e78d6;
+}
+
+.login{
+	background-color: white;
+	width: 400px;
+	height: 300px;
+	
+	margin: 50 auto;
+	border-radius: 20px;
+	padding: 80px;
+}
+
+.login h1{
+	color: black;
+	text-align: center;
+
+}

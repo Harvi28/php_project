@@ -1,0 +1,65 @@
+/**{
+	background-color: blue;
+	align: center;
+}*/
+body{
+	background-color: #3e78d6;
+}
+h1{
+	color: white;
+}
+
+form{
+	padding: 10 20;
+}
+
+.frm{
+	align: center;
+	background-color: white;
+	color: black;
+	float: center;
+	width: 570px;
+	height: 600px;
+	border-radius: 15px;
+	padding: 0 auto;
+	margin: auto;
+	
+}
+
+.frm h4{
+	padding-top: 20px;
+	font-size: 25px;
+}
+
+.frm label,input{
+ width: 500px;
+ float: center;
+  padding-left: 10px;
+
+}
+.frm input,textarea{
+	font-weight: bold;
+	border-color:#d7dbe0;
+	border-style: solid;
+}
+
+.frm input[type="radio"]{
+	padding: auto;
+	margin:auto;
+	float: left;
+    width: auto !important;
+}
+
+.frm h6 a{
+	background-color: white;
+	color: black;
+	font-size: 15px;
+	color: #3e78d6;
+}
+
+.frm input[type="submit"]{
+	background-color: #a8bee3;
+	border-radius: 2px;
+	border-color: black;
+}
+
