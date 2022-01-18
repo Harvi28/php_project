@@ -1,5 +1,5 @@
 <?php 
-require_once 'login.php';
+require_once 'login1.php';
 $conn = new mysqli($hn, $un, $pw, $db);
 if($conn->connect_error) die("fatal error");
 /*$query = "CREATE TABLE authordet(Name VARCHAR(32) NOT NULL,
