@@ -9,6 +9,7 @@
 	<div class="block">
 	<span class="a"><a href="addblog.php">Add New Blog</a></span>
 	<span class="a"><a href="aulogin.php">Logout</a></span>
+	<span class="a"><a href="blogs.php">Blogs</a></span>
 	</div>
     <?php
     include_once("login1.php"); 
@@ -40,15 +41,15 @@
 		    <td><?php echo $data['picture']; ?></td>
 		  </tr>	-->
 		  
-		 <div onclick="blogdetail.php">
-		  <label>Name:</label><br>
+		 <div >
+		  <label><b>Name:</b></label>
 		  <?php echo $data['name']; ?><br><br>
-		  <label>Title:</label><br>
+		  <label><b>Title:</b></label>
 		  <?php echo $data['title']; ?><br><br>
-		  <label>Content:</label><br>
+		  <label><b>Content:</b></label>
 		  <?php echo $data['content']; ?><br><br>
-          <label>Picture:</label><br>
-		  <img src="images/<?php echo $data['picture']; ?>" width="100" height="100"><br>
+          <label><b>Picture:</b></label><br>
+		  <img src="images/<?php echo $data['picture']; ?>" width="100" height="100"><br><br>
 		 </div>
    
 		<?php

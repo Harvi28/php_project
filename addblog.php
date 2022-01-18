@@ -28,6 +28,7 @@ if(isset($_POST['title']) &&
    $result = $conn->query($query);
    //echo "<pre>";print_r($query);die("error");echo "</pre>";
 
+  
 }
 //echo "<pre>";print_r($r);die("sdf");
 ?>
@@ -45,13 +46,13 @@ if(isset($_POST['title']) &&
     <form method="POST" enctype="multipart/form-data">
 	<pre>
 		<label>Title</label>
-		<input type="title" name="title" id="title"><br>
+		<input type="title" name="title" id="title" required><br>
 		<label>Content</label>
-		<textarea name="content" id="content" rows="5" cols="20"></textarea><br>
+		<textarea name="content" id="content" rows="5" cols="20" required></textarea><br>
 		<label>Picture</label>
-		<input type="file" name="picture">
+		<input type="file" name="picture" required>
 		<br>
-		<input type="submit" name="submit" onsubmit="addblog.php">
+		<input type="submit" name="submit"></a>
 	</pre>
     </form>
 </div>

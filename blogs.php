@@ -1,6 +1,6 @@
 <?php 
 include_once("login1.php"); 
-    $sql = "select title, content, picture from author";		
+    $sql = "SELECT author.title, author.content, author.picture, authordet.name FROM author LEFT JOIN authordet ON author.ID=authordet.ID";		
 
     $result = "select ID from author";
     //echo "<pre>";print_r($result);die("sdf");
@@ -20,34 +20,37 @@ include_once("login1.php");
     //}
 
 ?>
+
+
 		<!DOCTYPE html>
 		<html>
 		<head>
 			<link rel="stylesheet" href="blogs.css">
 			<meta charset="utf-8">
-			<title></title>
-
+			<title>Blog Page</title>
+            
 		</head>
 		<body>
 		
 		
-          <div class="container" onclick="redirect()">
+          <div class="container" >
           
           	<?php
       			while($data = mysqli_fetch_array($records))
-					{
-						
-					?>    	
-             	<div class="panel">
-             	<img src="images/<?php echo $data['picture']; ?>" width="300px" height="300px">
+					{	
+					?>
+				   	
+             	<div class="panel" id="panel">
+             	<a href="blogdetail.php?id=<?php echo $data['id']; ?>"><img src="images/<?php echo $data['picture']; ?>" width="300px" height="300px" ></a>
              	<p><?php echo $data['content']; ?></p>
              	
-             	<!--<div>
-             		<span class="left"><p>sdf</p></span>
-             		<span class="right"><p>ttyl</p></span>		
+             	<div>
+             		<span class="left"><b><p><?php echo $data['title']; ?></p></b></span>
+             		
              	</div>
-             	<div class="foot"><p>footer</p>-->
+             	
              	</div>
+          
              	<?php
 						}
 			      ?>

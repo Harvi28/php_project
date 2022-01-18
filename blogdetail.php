@@ -5,17 +5,19 @@
 	<link rel="stylesheet" href="blogdetail.css">
 	<title>Blog Detail Page</title>
 	<script>
-	function redirect(){
-       
-	}
+	
 	</script>
 </head>
 <body>
 	<img src="images/blogimage.jpeg" class="responsive">
 
 <?php 
-include_once("login1.php"); 	
-    $result = "SELECT author.title, author.content, author.picture, authordet.name FROM author LEFT JOIN authordet ON author.ID=authordet.ID";		
+include_once("login1.php"); 
+   // $resultid= "SELECT ID from author";
+$blog_id = $_GET['id'];
+    $result = "SELECT author.title, author.content, author.picture, authordet.name FROM author LEFT JOIN authordet ON author.ID=authordet.ID where author.id = $blog_id";
+    // echo $result;	
+   
 		
     $db = mysqli_connect($hn, $un, $pw, $db); 
 	if(!$db)
@@ -23,16 +25,22 @@ include_once("login1.php");
 		die("Connection failed: " . mysqli_connect_error());
 	}
     $records = mysqli_query($db,$result);
+     	
     if (!$records) {
-        die("eror");
+        die("error");
     }
-    while($data = mysqli_fetch_array($records))
-		{
-		  //die("sdf");	
+    $data = mysqli_fetch_array($records);
 		
-?>
+		  //die("sdf");	
+			//if($resultid){
+         //echo "<pre>";
+         //print_r($data);
+         //die("sdf");
+
+		
+        ?>
    
-	<div class="container" onclick="redirect()">
+	<div class="container" >
 		<div class="left">
 			<h1><?php echo $data['title']; ?></h1>
 			<h3><?php echo $data['name']; ?></h3>
@@ -42,9 +50,12 @@ include_once("login1.php");
 			<img src="images/<?php echo $data['picture']; ?>" width="100" height="100">
 		</div>
 	</div>
-	
+
     <?php
-		}
+    //die(" ");
+	
+		//}
+	   //}
     ?>
 
 </body>
